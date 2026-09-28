@@ -772,3 +772,247 @@ ul {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.75rem;
 }
+
+/* =================     TEMA ESCURO     ==================== */
+
+body.escuro {
+    --fundo: #0d1420;
+    --fundo-card: #151e2c;
+    --fundo-secundario: #1c2737;
+    --texto: #edf3fb;
+    --texto-secundario: #aab6c6;
+    --borda: #29374a;
+    --sombra: 0 8px 25px rgba(0, 0, 0, 0.25);
+    --sombra-hover: 0 14px 35px rgba(0, 0, 0, 0.35);
+}
+
+body.escuro .cabecalho {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.escuro .busca {
+    background: var(--fundo-secundario);
+}
+
+body.escuro .newsletter {
+    background: #0a111c;
+    border-color: #0a111c;
+}
+
+/* =================     RESPONSIVIDADE - TABLET     ==================== */
+
+@media (max-width: 1050px) {
+
+    .destaques-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .secundarias {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .secundaria {
+        grid-template-columns: 1fr;
+    }
+
+    .secundaria img {
+        width: 100%;
+        height: 170px;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .lateral {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* =================     RESPONSIVIDADE - CELULAR     ==================== */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: min(100% - 28px, var(--largura));
+    }
+
+    .header-conteudo {
+        min-height: auto;
+        padding: 18px 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .logo {
+        align-self: center;
+        font-size: 2rem;
+    }
+
+    .busca {
+        width: 100%;
+    }
+
+    .menu a {
+        padding: 12px 11px;
+        font-size: 0.8rem;
+    }
+
+    .destaques {
+        padding-top: 38px;
+    }
+
+    .destaque {
+        grid-template-rows: 240px auto;
+    }
+
+    .destaque-info {
+        padding: 20px;
+    }
+
+    .destaque-info h2 {
+        font-size: 1.85rem;
+    }
+
+    .secundarias {
+        grid-template-columns: 1fr;
+    }
+
+    .secundaria {
+        grid-template-columns: 100px minmax(0, 1fr);
+    }
+
+    .secundaria img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .card > img {
+        height: 230px;
+    }
+
+    .lateral {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 5px;
+    }
+
+    .filtro {
+        flex: 0 0 auto;
+    }
+
+    .footer-content,
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-content nav ul {
+        gap: 12px 18px;
+    }
+
+    .noticia-completa {
+        padding: 45px 0 60px;
+    }
+
+    .noticia-completa h1 {
+        font-size: 2.2rem;
+    }
+
+    .noticia-completa > img {
+        max-height: 350px;
+    }
+
+}
+
+/* =================     RESPONSIVIDADE - CELULAR PEQUENO     ==================== */
+
+@media (max-width: 430px) {
+
+    .topo-conteudo {
+        font-size: 0.72rem;
+    }
+
+    .titulo-secao h1 {
+        font-size: 2rem;
+    }
+
+    .titulo-secao h2 {
+        font-size: 1.8rem;
+    }
+
+    .destaque {
+        grid-template-rows: 200px auto;
+    }
+
+    .destaque-info h2 {
+        font-size: 1.6rem;
+    }
+
+    .secundaria {
+        grid-template-columns: 85px minmax(0, 1fr);
+    }
+
+    .secundaria img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .secundaria h3 {
+        font-size: 1.05rem;
+    }
+
+    .card-info {
+        padding: 16px;
+    }
+
+    .card-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .card > img {
+        height: 200px;
+    }
+
+    .card-meta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .noticia-meta {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+}
+
+/* =================     REDUÇÃO DE MOVIMENTO     ==================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
+}
