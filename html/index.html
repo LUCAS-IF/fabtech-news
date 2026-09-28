@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FabTech News - notícias sobre fabricação digital, eletrônica, programação e inovação.">
+
+    <title>FabTech News | Tecnologia, Maker e Inovação</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- JavaScript -->
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Link para acessibilidade -->
+    <a href="#conteudo-principal" class="link-pular">Pular para o conteúdo</a>
+
+
+    <!-- =================     HEADER     ==================== -->
+
+    <header class="cabecalho">
+
+        <!-- Barra superior -->
+        <div class="topo">
+
+            <div class="container topo-conteudo">
+
+                <span class="ao-vivo">AO VIVO</span>
+
+                <time id="relogio" datetime="">Carregando...</time>
+
+                <button id="btn-tema" class="tema" type="button" aria-label="Alternar tema claro e escuro">
+                    🌙
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Logo e busca -->
+        <div class="header-principal">
+
+            <div class="container header-conteudo">
+
+                <a href="#inicio" class="logo">FabTech <span>News</span></a>
+
+                <form id="form-busca" class="busca" role="search">
+
+                    <label for="campo-busca" class="escondido">Pesquisar notícias</label>
+
+                    <input type="search" id="campo-busca" placeholder="Pesquisar notícias..." autocomplete="off">
+
+                    <button type="submit" aria-label="Pesquisar">
+                        🔎
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- Menu -->
+        <nav class="menu" aria-label="Navegação principal">
+
+            <div class="container">
+
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#ultimas">Últimas</a></li>
+                    <li><a href="#ultimas" data-categoria="Impressão 3D">Impressão 3D</a></li>
+                    <li><a href="#ultimas" data-categoria="Marcenaria">Marcenaria</a></li>
+                    <li><a href="#ultimas" data-categoria="Corte a Laser">Corte a Laser</a></li>
+                    <li><a href="#ultimas" data-categoria="Eletrônica">Eletrônica</a></li>
+                    <li><a href="#ultimas" data-categoria="Arduino">Arduino</a></li>
+                    <li><a href="#ultimas" data-categoria="Programação">Programação</a></li>
+                    <li><a href="#ultimas" data-categoria="Inteligência Artificial">I.A.</a></li>
+                    <li><a href="#ultimas" data-categoria="Robótica">Robótica</a></li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =================     MAIN     ==================== -->
+
+    <main id="conteudo-principal">
+
+
+        <!-- =================     DESTAQUES     ==================== -->
+
+        <section id="inicio" class="destaques">
+
+            <div class="container">
+
+                <div class="titulo-secao">
+                    <span>Destaques</span>
+                    <h1>Tecnologia, criatividade e fabricação digital</h1>
+                </div>
+
+
+                <div class="destaques-grid">
+
+
+                    <!-- Notícia principal -->
+                    <article id="destaque" class="destaque">
+
+                        <!-- Conteúdo inserido pelo JavaScript -->
+
+                    </article>
+
+
+                    <!-- Notícias secundárias -->
+                    <div id="secundarias" class="secundarias">
+
+                        <!-- Conteúdo inserido pelo JavaScript -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================     ÚLTIMAS NOTÍCIAS     ==================== -->
+
+        <section id="ultimas" class="ultimas">
+
+            <div class="container">
+
+                <div class="layout">
+
+
+                    <!-- =================     NOTÍCIAS     ==================== -->
+
+                    <div class="noticias">
+
+                        <div class="titulo-secao">
+                            <span>Notícias</span>
+                            <h2>Últimas notícias</h2>
+                        </div>
+
+                        <!-- Filtros -->
+                        <div class="filtros" aria-label="Filtrar notícias por categoria">
+
+                            <button class="filtro ativo" type="button" data-filtro="Todas">
+                                Todas
+                            </button>
+
+                            <button class="filtro" type="button" data-filtro="Impressão 3D">
+                                Impressão 3D
+                            </button>
+
+                            <button class="filtro" type="button" data-filtro="Marcenaria">
+                                Marcenaria
+                            </button>
+
+                            <button class="filtro" type="button" data-filtro="Corte a Laser">
+                                Corte a Laser
+                            </button>
+
+                            <button class="filtro" type="button" data-filtro="Eletrônica">
+                                Eletrônica
+                            </button>
+
+                            <button class="filtro" type="button" data-filtro="Arduino">
+                                Arduino
+                            </button>
+
+                            <button class="filtro" type="button" data-filtro="Programação">
+                                Programação
+                            </button>
+
+                            <button class="filtro" type="button" data-filtro="Inteligência Artificial">
+                                I.A.
+                            </button>
+
+                            <button class="filtro" type="button" data-filtro="Robótica">
+                                Robótica
+                            </button>
+
+                        </div>
+
+                        <!-- Grade de notícias -->
+                        <div id="grade-noticias" class="grade">
+
+                            <!-- As 10 notícias serão criadas pelo JavaScript -->
+
+                        </div>
+
+                        <!-- Carregar mais -->
+                        <div class="mais">
+
+                            <button id="carregar" type="button">
+                                Carregar mais
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================     ASIDE     ==================== -->
+
+                    <aside class="lateral">
+
+
+                        <!-- Categorias -->
+                        <section class="box">
+
+                            <h2>Categorias</h2>
+
+                            <ul class="categorias">
+
+                                <li>
+                                    <a href="#ultimas" data-categoria="Impressão 3D">
+                                        Impressão 3D
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#ultimas" data-categoria="Marcenaria">
+                                        Marcenaria
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#ultimas" data-categoria="Corte a Laser">
+                                        Corte a Laser
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#ultimas" data-categoria="Eletrônica">
+                                        Eletrônica
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#ultimas" data-categoria="Arduino">
+                                        Arduino
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#ultimas" data-categoria="Programação">
+                                        Programação
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#ultimas" data-categoria="Inteligência Artificial">
+                                        Inteligência Artificial
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#ultimas" data-categoria="Robótica">
+                                        Robótica
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </section>
+
+
+                        <!-- Newsletter -->
+                        <section id="newsletter" class="box newsletter">
+
+                            <h2>Receba nossas notícias</h2>
+
+                            <p>
+                                Cadastre seu e-mail para receber as novidades do FabTech News.
+                            </p>
+
+                            <form id="form-newsletter">
+
+                                <div class="campo">
+
+                                    <label for="email">Seu e-mail</label>
+
+                                    <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
+
+                                </div>
+
+                                <button type="submit">
+                                    Cadastrar
+                                </button>
+
+                            </form>
+
+                            <p id="mensagem" aria-live="polite"></p>
+
+                        </section>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================     FOOTER     ==================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+                    <a href="#inicio" class="logo footer-logo">FabTech <span>News</span></a>
+                    <p>Tecnologia, fabricação digital e inovação.</p>
+                </div>
+
+                <nav aria-label="Navegação do rodapé">
+
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#ultimas">Últimas notícias</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                    </ul>
+
+                </nav>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>© 2026 FabTech News. Projeto acadêmico.</p>
+                <p>Desenvolvido com HTML, CSS e JavaScript.</p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
