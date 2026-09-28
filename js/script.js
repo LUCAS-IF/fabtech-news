@@ -116,3 +116,87 @@ const noticias = [
     }
 
 ];
+
+
+let noticiasExibidas = 6;
+let categoriaAtual = "Todas";
+let buscaAtual = "";
+
+
+/* =================     ELEMENTOS     ==================== */
+
+const gradeNoticias = document.querySelector("#grade-noticias");
+const destaque = document.querySelector("#destaque");
+const secundarias = document.querySelector("#secundarias");
+const campoBusca = document.querySelector("#campo-busca");
+const formBusca = document.querySelector("#form-busca");
+const botoesFiltro = document.querySelectorAll(".filtro");
+const botaoCarregar = document.querySelector("#carregar");
+const botaoTema = document.querySelector("#btn-tema");
+const relogio = document.querySelector("#relogio");
+const formNewsletter = document.querySelector("#form-newsletter");
+const mensagem = document.querySelector("#mensagem");
+
+
+/* =================     CRIAR CARD     ==================== */
+
+function criarCard(noticia) {
+
+    return `
+        <article class="card">
+            <img src="${noticia.imagem}" alt="${noticia.alt}">
+            <div class="card-info">
+                <span class="categoria">${noticia.categoria}</span>
+                <h3>${noticia.titulo}</h3>
+                <p>${noticia.resumo}</p>
+                <div class="card-meta">
+                    <span>${noticia.autor}</span>
+                    <time>${noticia.data}</time>
+                </div>
+            </div>
+        </article>
+    `;
+
+}
+
+
+/* =================     CRIAR DESTAQUE     ==================== */
+
+function criarDestaque() {
+
+    const noticia = noticias[0];
+
+    destaque.innerHTML = `
+        <img src="${noticia.imagem}" alt="${noticia.alt}">
+        <div class="destaque-info">
+            <span class="categoria">${noticia.categoria}</span>
+            <h2>${noticia.titulo}</h2>
+            <p>${noticia.resumo}</p>
+            <div class="card-meta">
+                <span>${noticia.autor}</span>
+                <time>${noticia.data}</time>
+            </div>
+        </div>
+    `;
+
+}
+
+
+/* =================     NOTÍCIAS SECUNDÁRIAS     ==================== */
+
+function criarSecundarias() {
+
+    const noticiasSecundarias = noticias.slice(1, 4);
+
+    secundarias.innerHTML = noticiasSecundarias.map(noticia => `
+        <article class="secundaria">
+            <img src="${noticia.imagem}" alt="${noticia.alt}">
+            <div>
+                <span class="categoria">${noticia.categoria}</span>
+                <h3>${noticia.titulo}</h3>
+                <span class="data">${noticia.data}</span>
+            </div>
+        </article>
+    `).join("");
+
+}
