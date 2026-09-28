@@ -475,3 +475,27 @@ if (campoBusca) {
     });
 
 }
+
+/* =================     MENU POR CATEGORIA     ==================== */
+
+document.querySelectorAll("[data-categoria]").forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        categoriaAtual = item.dataset.categoria;
+        noticiasExibidas = 6;
+
+        botoesFiltro.forEach(botao => {
+
+            botao.classList.toggle(
+                "ativo",
+                botao.dataset.filtro === categoriaAtual
+            );
+
+        });
+
+        mostrarNoticias();
+
+    });
+
+});
