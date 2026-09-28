@@ -1,5 +1,6 @@
 "use strict";
 
+
 /* =================     NOTÍCIAS     ==================== */
 
 const noticias = [
@@ -205,6 +206,7 @@ function abrirNoticia(id) {
 
 }
 
+
 function prepararCliqueNoticia(elemento) {
 
     if (!elemento) {
@@ -220,6 +222,7 @@ function prepararCliqueNoticia(elemento) {
         }
 
     });
+
 
     elemento.addEventListener("keydown", evento => {
 
@@ -238,6 +241,7 @@ function prepararCliqueNoticia(elemento) {
     });
 
 }
+
 
 /* =================     CRIAR CARD     ==================== */
 
@@ -434,6 +438,7 @@ botoesFiltro.forEach(botao => {
 
 });
 
+
 /* =================     BUSCA     ==================== */
 
 if (formBusca) {
@@ -476,6 +481,7 @@ if (campoBusca) {
 
 }
 
+
 /* =================     MENU POR CATEGORIA     ==================== */
 
 document.querySelectorAll("[data-categoria]").forEach(item => {
@@ -499,3 +505,58 @@ document.querySelectorAll("[data-categoria]").forEach(item => {
     });
 
 });
+
+
+/* =================     RELÓGIO     ==================== */
+
+function atualizarRelogio() {
+
+    if (!relogio) {
+        return;
+    }
+
+    const agora = new Date();
+
+    const data = agora.toLocaleDateString("pt-BR");
+    const hora = agora.toLocaleTimeString("pt-BR");
+
+    relogio.textContent = `${data} - ${hora}`;
+    relogio.dateTime = agora.toISOString();
+
+}
+
+if (relogio) {
+
+    atualizarRelogio();
+
+    setInterval(atualizarRelogio, 1000);
+
+}
+
+/* =================     TEMA     ==================== */
+
+function aplicarTema(tema) {
+
+    if (!botaoTema) {
+        return;
+    }
+
+
+    document.body.classList.toggle(
+        "escuro",
+        tema === "escuro"
+    );
+
+
+    botaoTema.textContent =
+        tema === "escuro" ? "☀️" : "🌙";
+
+
+    botaoTema.setAttribute(
+        "aria-label",
+        tema === "escuro"
+            ? "Ativar tema claro"
+            : "Ativar tema escuro"
+    );
+
+}
