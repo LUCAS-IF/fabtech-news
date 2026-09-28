@@ -616,3 +616,42 @@ if (botaoTema) {
 
 carregarTema();
 
+
+/* =================     NEWSLETTER     ==================== */
+
+if (formNewsletter) {
+
+    formNewsletter.addEventListener("submit", evento => {
+
+        evento.preventDefault();
+
+
+        const campoEmail = document.querySelector("#email");
+        const email = campoEmail.value.trim();
+
+
+        if (!email) {
+
+            mensagem.textContent = "Digite seu e-mail.";
+
+            return;
+        }
+
+
+        if (!email.includes("@") || !email.includes(".")) {
+
+            mensagem.textContent = "Digite um e-mail válido.";
+
+            return;
+        }
+
+
+        mensagem.textContent =
+            "Cadastro realizado com sucesso!";
+
+
+        formNewsletter.reset();
+
+    });
+
+}
