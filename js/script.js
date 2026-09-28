@@ -1,6 +1,5 @@
 "use strict";
 
-
 /* =================     NOTÍCIAS     ==================== */
 
 const noticias = [
@@ -13,7 +12,13 @@ const noticias = [
         data: "25/09/2026",
         imagem: "../img/impressao-3d.jpg",
         alt: "Impressora 3D produzindo uma peça",
-        resumo: "Novas tecnologias de fabricação aditiva estão aumentando a velocidade e a precisão na produção de peças."
+        resumo: "Novas tecnologias de fabricação aditiva estão aumentando a velocidade e a precisão na produção de peças.",
+        conteudo: `
+            <p>A impressão 3D continua evoluindo e ampliando as possibilidades de fabricação de peças para projetos pessoais, educacionais e profissionais.</p>
+            <p>Novos equipamentos e métodos de fabricação procuram reduzir o tempo de produção sem comprometer a qualidade das peças. Essa evolução é importante principalmente para prototipagem e desenvolvimento de produtos.</p>
+            <p>Além da velocidade, a precisão também ganhou destaque. Melhorias no controle de movimento, nos materiais e nos softwares permitem produzir objetos cada vez mais detalhados.</p>
+            <p>Para o universo maker, essas tecnologias ajudam estudantes, profissionais e criadores a transformar ideias em protótipos físicos com mais facilidade.</p>
+        `
     },
 
     {
@@ -24,7 +29,13 @@ const noticias = [
         data: "23/09/2026",
         imagem: "../img/impressao-3d-2.jpg",
         alt: "Peças produzidas em uma impressora 3D",
-        resumo: "A fabricação de peças personalizadas continua ampliando as possibilidades para projetos independentes e pequenos negócios."
+        resumo: "A fabricação de peças personalizadas continua ampliando as possibilidades para projetos independentes e pequenos negócios.",
+        conteudo: `
+            <p>Uma das principais vantagens da impressão 3D é a possibilidade de produzir objetos personalizados de acordo com diferentes necessidades.</p>
+            <p>Peças de reposição, suportes, acessórios e protótipos podem ser desenvolvidos sem a necessidade de grandes estruturas industriais.</p>
+            <p>Essa característica também beneficia pequenos negócios e criadores independentes, que conseguem testar diferentes versões de um produto antes de iniciar uma produção maior.</p>
+            <p>Com a evolução dos materiais e dos equipamentos, a fabricação personalizada tende a ocupar um espaço cada vez maior em projetos de pequena escala.</p>
+        `
     },
 
     {
@@ -35,7 +46,13 @@ const noticias = [
         data: "21/09/2026",
         imagem: "../img/marcenaria.jpg",
         alt: "Pessoa trabalhando com madeira em uma oficina",
-        resumo: "Máquinas digitais e ferramentas tradicionais estão sendo combinadas para criar projetos de marcenaria mais precisos."
+        resumo: "Máquinas digitais e ferramentas tradicionais estão sendo combinadas para criar projetos de marcenaria mais precisos.",
+        conteudo: `
+            <p>A marcenaria também passou a incorporar ferramentas digitais capazes de auxiliar diferentes etapas do desenvolvimento de projetos.</p>
+            <p>Máquinas de controle computadorizado, softwares de desenho e equipamentos de fabricação digital permitem planejar cortes e encaixes com maior precisão.</p>
+            <p>Mesmo com a presença da tecnologia, ferramentas tradicionais continuam sendo importantes para acabamento, montagem e personalização das peças.</p>
+            <p>A combinação entre técnicas tradicionais e fabricação digital cria novas possibilidades para oficinas, estudantes e profissionais da área.</p>
+        `
     },
 
     {
@@ -46,7 +63,13 @@ const noticias = [
         data: "19/09/2026",
         imagem: "../img/corte-laser.jpg",
         alt: "Máquina de corte a laser trabalhando em uma placa",
-        resumo: "O corte a laser facilita a produção de protótipos, peças decorativas e componentes para projetos maker."
+        resumo: "O corte a laser facilita a produção de protótipos, peças decorativas e componentes para projetos maker.",
+        conteudo: `
+            <p>O corte a laser é uma tecnologia utilizada em diversos projetos de fabricação digital por permitir cortes e gravações com grande nível de detalhamento.</p>
+            <p>Materiais como madeira, acrílico e outros substratos podem ser trabalhados de acordo com as características do equipamento utilizado.</p>
+            <p>No ambiente maker, a tecnologia é utilizada para criar protótipos, peças decorativas, caixas, placas e componentes para diferentes projetos.</p>
+            <p>A utilização de arquivos digitais também facilita a repetição de peças e a realização de alterações antes da fabricação.</p>
+        `
     },
 
     {
@@ -57,7 +80,13 @@ const noticias = [
         data: "17/09/2026",
         imagem: "../img/corte-laser-2.jpg",
         alt: "Peça de madeira sendo cortada a laser",
-        resumo: "A tecnologia vem sendo utilizada em projetos de pequena escala que combinam criatividade, design e fabricação digital."
+        resumo: "A tecnologia vem sendo utilizada em projetos de pequena escala que combinam criatividade, design e fabricação digital.",
+        conteudo: `
+            <p>Projetos maker utilizam o corte a laser para transformar desenhos digitais em objetos físicos com rapidez e precisão.</p>
+            <p>A tecnologia pode ser utilizada em projetos educacionais, peças decorativas, protótipos e estruturas desenvolvidas a partir de modelos digitais.</p>
+            <p>Uma característica importante é a possibilidade de testar diferentes formas e dimensões sem precisar refazer todo o processo de planejamento.</p>
+            <p>Essa flexibilidade aproxima design, criatividade e fabricação digital em diferentes tipos de projeto.</p>
+        `
     },
 
     {
@@ -68,7 +97,13 @@ const noticias = [
         data: "15/09/2026",
         imagem: "../img/eletronica.jpg",
         alt: "Componentes eletrônicos sobre uma bancada",
-        resumo: "Sensores, microcontroladores e componentes eletrônicos estão presentes em uma grande variedade de projetos."
+        resumo: "Sensores, microcontroladores e componentes eletrônicos estão presentes em uma grande variedade de projetos.",
+        conteudo: `
+            <p>A eletrônica está presente em grande parte dos projetos desenvolvidos no universo maker.</p>
+            <p>Componentes como resistores, LEDs, sensores, motores e microcontroladores permitem criar sistemas capazes de receber informações e executar ações.</p>
+            <p>O aprendizado da eletrônica também ajuda estudantes a compreender conceitos relacionados a circuitos, energia e automação.</p>
+            <p>Com ferramentas acessíveis e plataformas de prototipagem, projetos eletrônicos podem ser desenvolvidos de forma gradual e experimental.</p>
+        `
     },
 
     {
@@ -79,7 +114,13 @@ const noticias = [
         data: "13/09/2026",
         imagem: "../img/arduino.jpg",
         alt: "Placa Arduino conectada a componentes eletrônicos",
-        resumo: "A plataforma continua sendo utilizada para ensinar programação, eletrônica e desenvolvimento de protótipos."
+        resumo: "A plataforma continua sendo utilizada para ensinar programação, eletrônica e desenvolvimento de protótipos.",
+        conteudo: `
+            <p>Plataformas baseadas em Arduino são utilizadas em projetos que combinam programação, eletrônica e automação.</p>
+            <p>Uma placa pode ser conectada a sensores, LEDs, motores e outros componentes para criar sistemas interativos.</p>
+            <p>Por utilizar uma estrutura relativamente simples, a plataforma é bastante adequada para atividades educacionais e protótipos.</p>
+            <p>Projetos com Arduino também ajudam a desenvolver conhecimentos que podem ser aplicados posteriormente em sistemas mais complexos.</p>
+        `
     },
 
     {
@@ -90,7 +131,13 @@ const noticias = [
         data: "11/09/2026",
         imagem: "../img/programacao.jpg",
         alt: "Código de programação exibido em um computador",
-        resumo: "Conhecimentos de programação permitem transformar projetos eletrônicos em sistemas cada vez mais interativos."
+        resumo: "Conhecimentos de programação permitem transformar projetos eletrônicos em sistemas cada vez mais interativos.",
+        conteudo: `
+            <p>A programação é uma ferramenta importante para transformar componentes eletrônicos e dispositivos físicos em sistemas interativos.</p>
+            <p>Por meio do código, é possível controlar sensores, motores, iluminação, telas e diferentes tipos de automação.</p>
+            <p>O desenvolvimento de projetos maker também pode contribuir para o aprendizado de lógica de programação e resolução de problemas.</p>
+            <p>Com linguagens e plataformas acessíveis, estudantes conseguem criar aplicações que conectam software e hardware.</p>
+        `
     },
 
     {
@@ -101,7 +148,13 @@ const noticias = [
         data: "09/09/2026",
         imagem: "../img/inteligencia-artificial.jpg",
         alt: "Representação de inteligência artificial em uma tela",
-        resumo: "Ferramentas de inteligência artificial estão sendo utilizadas para auxiliar pesquisas, programação, criação e prototipagem."
+        resumo: "Ferramentas de inteligência artificial estão sendo utilizadas para auxiliar pesquisas, programação, criação e prototipagem.",
+        conteudo: `
+            <p>A inteligência artificial vem sendo utilizada em diferentes etapas de desenvolvimento de projetos tecnológicos.</p>
+            <p>Ferramentas baseadas em IA podem auxiliar na pesquisa de informações, geração de ideias, organização de projetos e desenvolvimento de código.</p>
+            <p>No ambiente maker, essas ferramentas podem servir como apoio durante o planejamento e a prototipagem de soluções.</p>
+            <p>Mesmo com essas possibilidades, os resultados precisam ser analisados e testados para verificar se realmente atendem aos objetivos do projeto.</p>
+        `
     },
 
     {
@@ -112,7 +165,13 @@ const noticias = [
         data: "07/09/2026",
         imagem: "../img/robotica.jpg",
         alt: "Robô desenvolvido em uma bancada de projetos",
-        resumo: "Projetos de robótica reúnem diferentes áreas da tecnologia em sistemas capazes de interagir com o ambiente."
+        resumo: "Projetos de robótica reúnem diferentes áreas da tecnologia em sistemas capazes de interagir com o ambiente.",
+        conteudo: `
+            <p>A robótica combina diferentes áreas da tecnologia para desenvolver máquinas capazes de executar tarefas e interagir com o ambiente.</p>
+            <p>Projetos de robótica normalmente envolvem programação, eletrônica, sensores, motores e estruturas mecânicas.</p>
+            <p>A fabricação digital também pode contribuir para a criação de peças e estruturas personalizadas para robôs e protótipos.</p>
+            <p>Por reunir diferentes conhecimentos, a robótica é uma área bastante utilizada em projetos educacionais e experimentais.</p>
+        `
     }
 
 ];
@@ -138,12 +197,54 @@ const formNewsletter = document.querySelector("#form-newsletter");
 const mensagem = document.querySelector("#mensagem");
 
 
+/* =================     ABRIR NOTÍCIA     ==================== */
+
+function abrirNoticia(id) {
+
+    window.location.href = `noticia.html?id=${id}`;
+
+}
+
+function prepararCliqueNoticia(elemento) {
+
+    if (!elemento) {
+        return;
+    }
+
+    elemento.addEventListener("click", () => {
+
+        const id = elemento.dataset.id;
+
+        if (id) {
+            abrirNoticia(id);
+        }
+
+    });
+
+    elemento.addEventListener("keydown", evento => {
+
+        if (evento.key === "Enter" || evento.key === " ") {
+
+            evento.preventDefault();
+
+            const id = elemento.dataset.id;
+
+            if (id) {
+                abrirNoticia(id);
+            }
+
+        }
+
+    });
+
+}
+
 /* =================     CRIAR CARD     ==================== */
 
 function criarCard(noticia) {
 
     return `
-        <article class="card">
+        <article class="card" data-id="${noticia.id}" tabindex="0" role="link">
             <img src="${noticia.imagem}" alt="${noticia.alt}">
             <div class="card-info">
                 <span class="categoria">${noticia.categoria}</span>
@@ -164,7 +265,16 @@ function criarCard(noticia) {
 
 function criarDestaque() {
 
+    if (!destaque) {
+        return;
+    }
+
+
     const noticia = noticias[0];
+
+    destaque.dataset.id = noticia.id;
+    destaque.setAttribute("tabindex", "0");
+    destaque.setAttribute("role", "link");
 
     destaque.innerHTML = `
         <img src="${noticia.imagem}" alt="${noticia.alt}">
@@ -179,6 +289,8 @@ function criarDestaque() {
         </div>
     `;
 
+    prepararCliqueNoticia(destaque);
+
 }
 
 
@@ -186,10 +298,15 @@ function criarDestaque() {
 
 function criarSecundarias() {
 
+    if (!secundarias) {
+        return;
+    }
+
+
     const noticiasSecundarias = noticias.slice(1, 4);
 
     secundarias.innerHTML = noticiasSecundarias.map(noticia => `
-        <article class="secundaria">
+        <article class="secundaria" data-id="${noticia.id}" tabindex="0" role="link">
             <img src="${noticia.imagem}" alt="${noticia.alt}">
             <div>
                 <span class="categoria">${noticia.categoria}</span>
@@ -199,4 +316,120 @@ function criarSecundarias() {
         </article>
     `).join("");
 
+
+    document.querySelectorAll(".secundaria").forEach(item => {
+        prepararCliqueNoticia(item);
+    });
+
 }
+
+
+/* =================     FILTRAR NOTÍCIAS     ==================== */
+
+function filtrarNoticias() {
+
+    return noticias.filter(noticia => {
+
+        const mesmaCategoria =
+            categoriaAtual === "Todas" ||
+            noticia.categoria === categoriaAtual;
+
+        const texto = `
+            ${noticia.titulo}
+            ${noticia.resumo}
+            ${noticia.categoria}
+            ${noticia.conteudo}
+        `.toLowerCase();
+
+        const mesmaBusca =
+            texto.includes(buscaAtual.toLowerCase());
+
+        return mesmaCategoria && mesmaBusca;
+
+    });
+
+}
+
+
+/* =================     MOSTRAR NOTÍCIAS     ==================== */
+
+function mostrarNoticias() {
+
+    if (!gradeNoticias) {
+        return;
+    }
+
+
+    const resultado = filtrarNoticias();
+    const noticiasParaMostrar = resultado.slice(0, noticiasExibidas);
+
+    gradeNoticias.innerHTML = noticiasParaMostrar
+        .map(noticia => criarCard(noticia))
+        .join("");
+
+
+    document.querySelectorAll(".card").forEach(card => {
+        prepararCliqueNoticia(card);
+    });
+
+
+    atualizarBotaoCarregar(resultado.length);
+
+}
+
+
+/* =================     BOTÃO CARREGAR MAIS     ==================== */
+
+function atualizarBotaoCarregar(total) {
+
+    if (!botaoCarregar) {
+        return;
+    }
+
+
+    if (noticiasExibidas >= total) {
+
+        botaoCarregar.style.display = "none";
+
+    } else {
+
+        botaoCarregar.style.display = "block";
+
+    }
+
+}
+
+
+if (botaoCarregar) {
+
+    botaoCarregar.addEventListener("click", () => {
+
+        noticiasExibidas += 3;
+
+        mostrarNoticias();
+
+    });
+
+}
+
+
+/* =================     FILTROS     ==================== */
+
+botoesFiltro.forEach(botao => {
+
+    botao.addEventListener("click", () => {
+
+        categoriaAtual = botao.dataset.filtro;
+        noticiasExibidas = 6;
+
+        botoesFiltro.forEach(item => {
+            item.classList.remove("ativo");
+        });
+
+        botao.classList.add("ativo");
+
+        mostrarNoticias();
+
+    });
+
+});
