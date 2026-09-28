@@ -72,3 +72,28 @@ Exemplo:
 
 ```text
 html/noticia.html?id=1
+
+## Design
+
+### Paleta de cores
+
+A identidade visual utiliza uma paleta própria com tons claros, azul como cor principal e verde-água como cor de destaque.
+
+- Fundo: `#f5f7fa`
+- Fundo dos cards: `#ffffff`
+- Fundo secundário: `#eef2f6`
+- Texto principal: `#18212f`
+- Texto secundário: `#637083`
+- Bordas: `#dce2e9`
+- Cor principal: `#0f6fff`
+- Cor principal escura: `#0958cc`
+- Cor de destaque: `#15b8a6`
+
+### Tipografia
+
+- **Newsreader** — utilizada no logotipo e nos títulos das notícias.
+- **Inter** — utilizada no corpo dos textos, navegação, botões e informações secundárias.
+
+### Fontes das imagens
+
+As imagens utilizadas no projeto estão armazenadas localmente na pasta `img/`.
