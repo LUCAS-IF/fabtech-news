@@ -560,3 +560,59 @@ function aplicarTema(tema) {
     );
 
 }
+
+
+/* =================     LOCAL STORAGE     ==================== */
+
+function carregarTema() {
+
+    let tema = "claro";
+
+    try {
+
+        tema = localStorage.getItem("tema") || "claro";
+
+    } catch (erro) {
+
+        tema = "claro";
+
+    }
+
+
+    aplicarTema(tema);
+
+}
+
+
+if (botaoTema) {
+
+    botaoTema.addEventListener("click", () => {
+
+        const temaAtual = document.body.classList.contains("escuro")
+            ? "escuro"
+            : "claro";
+
+        const novoTema =
+            temaAtual === "escuro" ? "claro" : "escuro";
+
+
+        try {
+
+            localStorage.setItem("tema", novoTema);
+
+        } catch (erro) {
+
+            // Continua funcionando mesmo sem localStorage.
+
+        }
+
+
+        aplicarTema(novoTema);
+
+    });
+
+}
+
+
+carregarTema();
+
