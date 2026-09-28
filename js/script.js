@@ -613,7 +613,6 @@ if (botaoTema) {
 
 }
 
-
 carregarTema();
 
 
@@ -655,3 +654,69 @@ if (formNewsletter) {
     });
 
 }
+
+/* =================     PÁGINA DA NOTÍCIA     ==================== */
+
+function carregarNoticia() {
+
+    const conteudoNoticia = document.querySelector("#conteudo-noticia");
+
+    if (!conteudoNoticia) {
+        return;
+    }
+
+    const parametros = new URLSearchParams(window.location.search);
+    const id = Number(parametros.get("id"));
+
+    const noticia = noticias.find(item => item.id === id);
+
+    if (!noticia) {
+
+        conteudoNoticia.innerHTML = `
+            <div class="erro">
+                <h1>Notícia não encontrada</h1>
+                <p>A notícia que você procura não existe.</p>
+                <a href="index.html">Voltar para as notícias</a>
+            </div>
+        `;
+
+        return;
+    }
+
+    document.title =
+        `${noticia.titulo} | FabTech News`;
+
+
+    conteudoNoticia.innerHTML = `
+        <article class="noticia-completa">
+
+            <span class="categoria">${noticia.categoria}</span>
+
+            <h1>${noticia.titulo}</h1>
+
+            <div class="noticia-meta">
+                <span>${noticia.autor}</span>
+                <time>${noticia.data}</time>
+            </div>
+
+            <img src="${noticia.imagem}" alt="${noticia.alt}">
+
+            <div class="noticia-texto">
+                ${noticia.conteudo}
+            </div>
+
+            <a href="index.html#ultimas" class="voltar">
+                ← Voltar para as notícias
+            </a>
+
+        </article>
+    `;
+
+}
+
+/* =================     INICIALIZAÇÃO     ==================== */
+
+criarDestaque();
+criarSecundarias();
+mostrarNoticias();
+carregarNoticia();
