@@ -433,3 +433,45 @@ botoesFiltro.forEach(botao => {
     });
 
 });
+
+/* =================     BUSCA     ==================== */
+
+if (formBusca) {
+
+    formBusca.addEventListener("submit", evento => {
+
+        evento.preventDefault();
+
+        buscaAtual = campoBusca.value.trim();
+        noticiasExibidas = 6;
+
+        mostrarNoticias();
+
+
+        const ultimas = document.querySelector("#ultimas");
+
+        if (ultimas) {
+
+            ultimas.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    });
+
+}
+
+
+if (campoBusca) {
+
+    campoBusca.addEventListener("input", () => {
+
+        buscaAtual = campoBusca.value.trim();
+        noticiasExibidas = 6;
+
+        mostrarNoticias();
+
+    });
+
+}
