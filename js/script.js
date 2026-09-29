@@ -628,7 +628,6 @@ if (formNewsletter) {
         const campoEmail = document.querySelector("#email");
         const email = campoEmail.value.trim();
 
-
         if (!email) {
 
             mensagem.textContent = "Digite seu e-mail.";
@@ -636,14 +635,14 @@ if (formNewsletter) {
             return;
         }
 
+        const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-        if (!email.includes("@") || !email.includes(".")) {
+        if (!emailValido) {
 
             mensagem.textContent = "Digite um e-mail válido.";
 
             return;
         }
-
 
         mensagem.textContent =
             "Cadastro realizado com sucesso!";
