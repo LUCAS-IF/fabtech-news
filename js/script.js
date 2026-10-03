@@ -645,7 +645,7 @@ if (formNewsletter) {
         }
 
         mensagem.textContent =
-            "Cadastro realizado com sucesso!";
+            "Cadastro realizado!";
 
 
         formNewsletter.reset();
